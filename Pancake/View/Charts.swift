@@ -66,6 +66,8 @@ struct LineChart: View, ChartView {
                 }
             }
         }
+        .padding()
+        .background(.regularMaterial, in: .rect(cornerRadius: 8))
     }
     
     func lineMarks() -> some ChartContent {
@@ -123,6 +125,8 @@ struct BarChart: View, ChartView {
                 }
             }
         }
+        .padding()
+        .background(.regularMaterial, in: .rect(cornerRadius: 8))
     }
     
     func barMarks() -> some ChartContent {
@@ -180,6 +184,8 @@ struct BarChartTranspose: View, ChartView {
             }
             .chartLegend(.hidden)
         }
+        .padding()
+        .background(.regularMaterial, in: .rect(cornerRadius: 8))
     }
     
     func barMarks() -> some ChartContent {
@@ -238,6 +244,8 @@ struct ScatterChart: View, ChartView {
                 }
             }
         }
+        .padding()
+        .background(.regularMaterial, in: .rect(cornerRadius: 8))
     }
 }
 
@@ -280,6 +288,8 @@ struct AreaChart: View, ChartView {
                 }
             }
         }
+        .padding()
+        .background(.regularMaterial, in: .rect(cornerRadius: 8))
     }
 }
 
@@ -324,7 +334,25 @@ struct HeatMap: View, ChartView {
                 AxisMarks(position: .top)
             }
         }
+        .padding()
+        .background(.regularMaterial, in: .rect(cornerRadius: 8))
     }
+}
+
+// MARK: - MeasureSummary
+struct MeasureSummary: View {
+    var measureName: String
+    var measureValue: Int
     
-    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(measureName)
+                .font(.headline)
+                .foregroundStyle(.secondary)
+            Text("\(measureValue)")
+                .font(.largeTitle)
+        }
+        .padding()
+        .background(.regularMaterial, in: .rect(cornerRadius: 8))
+    }
 }
