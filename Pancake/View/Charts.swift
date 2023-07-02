@@ -43,8 +43,8 @@ struct LineChart: View, ChartView {
             if let chartTitle {
                 HStack {
                     Text(chartTitle)
-                        .font(.title2)
-                        .fontWeight(.medium)
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
                     Spacer()
                 }
             }
@@ -104,8 +104,8 @@ struct BarChart: View, ChartView {
             if let chartTitle {
                 HStack {
                     Text(chartTitle)
-                        .font(.title2)
-                        .fontWeight(.medium)
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
                     Spacer()
                 }
             }
@@ -162,8 +162,8 @@ struct BarChartTranspose: View, ChartView {
             if let chartTitle {
                 HStack {
                     Text(chartTitle)
-                        .font(.title2)
-                        .fontWeight(.medium)
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
                     Spacer()
                 }
             }
@@ -221,8 +221,8 @@ struct ScatterChart: View, ChartView {
             if let chartTitle {
                 HStack {
                     Text(chartTitle)
-                        .font(.title2)
-                        .fontWeight(.medium)
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
                     Spacer()
                 }
             }
@@ -263,8 +263,8 @@ struct AreaChart: View, ChartView {
             if let chartTitle {
                 HStack {
                     Text(chartTitle)
-                        .font(.title2)
-                        .fontWeight(.medium)
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
                     Spacer()
                 }
             }
@@ -307,8 +307,8 @@ struct HeatMap: View, ChartView {
             if let chartTitle {
                 HStack {
                     Text(chartTitle)
-                        .font(.title2)
-                        .fontWeight(.medium)
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
                     Spacer()
                 }
             }
@@ -373,8 +373,8 @@ struct SalesPerStore: View, ChartView {
             if let chartTitle {
                 HStack {
                     Text(chartTitle)
-                        .font(.title2)
-                        .fontWeight(.medium)
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
                     Spacer()
                 }
             }
