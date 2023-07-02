@@ -13,6 +13,7 @@
 		CE78B8162A515C38009879D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE78B8152A515C38009879D0 /* Preview Assets.xcassets */; };
 		CE78B81F2A515C61009879D0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78B81E2A515C61009879D0 /* Data.swift */; };
 		CE78B8222A515C85009879D0 /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78B8212A515C85009879D0 /* Charts.swift */; };
+		CE78B8242A515D6D009879D0 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78B8232A515D6D009879D0 /* SummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE78B8172A515C38009879D0 /* Pancake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pancake.entitlements; sourceTree = "<group>"; };
 		CE78B81E2A515C61009879D0 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		CE78B8212A515C85009879D0 /* Charts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
+		CE78B8232A515D6D009879D0 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +87,9 @@
 		CE78B8202A515C73009879D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE78B8212A515C85009879D0 /* Charts.swift */,
 				CE78B8102A515C37009879D0 /* ContentView.swift */,
+				CE78B8212A515C85009879D0 /* Charts.swift */,
+				CE78B8232A515D6D009879D0 /* SummaryView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				CE78B8222A515C85009879D0 /* Charts.swift in Sources */,
 				CE78B8112A515C37009879D0 /* ContentView.swift in Sources */,
+				CE78B8242A515D6D009879D0 /* SummaryView.swift in Sources */,
 				CE78B81F2A515C61009879D0 /* Data.swift in Sources */,
 				CE78B80F2A515C37009879D0 /* PancakeApp.swift in Sources */,
 			);
