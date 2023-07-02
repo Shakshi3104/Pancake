@@ -14,7 +14,7 @@ struct SummaryView: View {
     @State private var showBarChartAverage = false
     
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             // Title
             HStack {
                 Text("Sales Summary")
@@ -44,6 +44,49 @@ struct SummaryView: View {
                     measureName: "Average Unit",
                     measureValue: meanUnit
                 )
+                
+                Spacer()
+            }
+            
+            // Charts
+            HStack(spacing: 16) {
+                LineChart(
+                    salesAmount: pancakesData.dailySales,
+                    chartTitle: "Daily Sales",
+                    xAxisLabel: "Date",
+                    yAxisLabel: "Sales",
+                    showAverage: showLineChartAverage
+                )
+                .onTapGesture {
+                    showLineChartAverage.toggle()
+                }
+                
+                BarChartTranspose(
+                    salesAmount: pancakesData.totalSalesPerCategory,
+                    
+                    chartTitle: "Total Sales per Topping",
+                    xAxisLabel: "Sales",
+                    yAxisLabel: "Topping",
+                    legendTitle: "Topping"
+                )
+            }
+            
+            HStack(spacing: 16) {
+                BarChart(
+                    salesAmount: pancakesData.dailySalesPerCategory,
+                    chartTitle: "Daily Sales per Topping",
+                    xAxisLabel: "Date",
+                    yAxisLabel: "Sales",
+                    legendTitle: "Topping"
+                )
+                
+                HeatMap(
+                    salesCount: pancakesData.salesCategoryVsStore,
+                    chartTitle: "Topping vs. Store",
+                    xAxisLabel: "Topping",
+                    yAxisLabel: "Store",
+                    legendTitle: "Sales"
+                )
             }
         }
     }
@@ -53,5 +96,6 @@ struct SummaryView: View {
 struct SummaryView_Preview: PreviewProvider {
     static var previews: some View {
         SummaryView(pancakesData: PancakesData())
+            .frame(minWidth: 900, minHeight: 600)
     }
 }
