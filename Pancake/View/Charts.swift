@@ -356,3 +356,60 @@ struct MeasureSummary: View {
         .background(.regularMaterial, in: .rect(cornerRadius: 8))
     }
 }
+
+// MARK: - BarChartPerStore
+struct SalesPerStore: View, ChartView {
+    var salesAmount: [SalesCount]
+    
+    var chartTitle: String?
+    var xAxisLabel: String
+    var yAxisLabel: String
+    var legendTitle: String?
+    
+    var showAverage: Bool = false
+    
+    var body: some View {
+        VStack {
+            if let chartTitle {
+                HStack {
+                    Text(chartTitle)
+                        .font(.title2)
+                        .fontWeight(.medium)
+                    Spacer()
+                }
+            }
+                
+            Chart {
+                if showAverage {
+                    barMarks()
+                        .foregroundStyle(.gray.opacity(0.5))
+                    
+                    let average: Double = Double(salesAmount.reduce(0) { $0 + $1.sales }) / Double(salesAmount.count)
+                    RuleMark(
+                        x: .value("Average", average)
+                    )
+                    .lineStyle(StrokeStyle(lineWidth: 3))
+                } else {
+                    barMarks()
+                }
+            }
+        }
+    }
+    
+    func barMarks() -> some ChartContent {
+        return ForEach(salesAmount, id: \.id) { amount in
+            if let store = amount.store, let legendTitle {
+                BarMark(
+                    x: .value(xAxisLabel, amount.sales),
+                    y: .value(yAxisLabel, store)
+                )
+                .foregroundStyle(by: .value(legendTitle, store))
+            } else {
+                BarMark(
+                    x: .value(xAxisLabel, amount.sales),
+                    y: .value(yAxisLabel, amount.date)
+                )
+            }
+        }
+    }
+}

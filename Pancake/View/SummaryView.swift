@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 // MARK: - SummaryView
 struct SummaryView: View {
     var pancakesData: PancakesData
@@ -61,13 +62,12 @@ struct SummaryView: View {
                     showLineChartAverage.toggle()
                 }
                 
-                BarChartTranspose(
-                    salesAmount: pancakesData.totalSalesPerCategory,
-                    
-                    chartTitle: "Total Sales per Topping",
-                    xAxisLabel: "Sales",
-                    yAxisLabel: "Topping",
-                    legendTitle: "Topping"
+                SalesPerStore(
+                    salesAmount: pancakesData.salesCategoryVsStore,
+                    chartTitle: "Orders per Store",
+                    xAxisLabel: "Date",
+                    yAxisLabel: "Orders",
+                    legendTitle: "Store"
                 )
             }
             
