@@ -394,6 +394,8 @@ struct SalesPerStore: View, ChartView {
                 }
             }
         }
+        .padding()
+        .background(.regularMaterial, in: .rect(cornerRadius: 8))
     }
     
     func barMarks() -> some ChartContent {
