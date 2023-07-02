@@ -11,6 +11,8 @@
 		CE78B8112A515C37009879D0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78B8102A515C37009879D0 /* ContentView.swift */; };
 		CE78B8132A515C38009879D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE78B8122A515C38009879D0 /* Assets.xcassets */; };
 		CE78B8162A515C38009879D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE78B8152A515C38009879D0 /* Preview Assets.xcassets */; };
+		CE78B81F2A515C61009879D0 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78B81E2A515C61009879D0 /* Data.swift */; };
+		CE78B8222A515C85009879D0 /* Charts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78B8212A515C85009879D0 /* Charts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		CE78B8122A515C38009879D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE78B8152A515C38009879D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE78B8172A515C38009879D0 /* Pancake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pancake.entitlements; sourceTree = "<group>"; };
+		CE78B81E2A515C61009879D0 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		CE78B8212A515C85009879D0 /* Charts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Charts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,9 @@
 		CE78B80D2A515C37009879D0 /* Pancake */ = {
 			isa = PBXGroup;
 			children = (
+				CE78B8202A515C73009879D0 /* View */,
+				CE78B81D2A515C54009879D0 /* Model */,
 				CE78B80E2A515C37009879D0 /* PancakeApp.swift */,
-				CE78B8102A515C37009879D0 /* ContentView.swift */,
 				CE78B8122A515C38009879D0 /* Assets.xcassets */,
 				CE78B8172A515C38009879D0 /* Pancake.entitlements */,
 				CE78B8142A515C38009879D0 /* Preview Content */,
@@ -67,6 +72,23 @@
 				CE78B8152A515C38009879D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE78B81D2A515C54009879D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE78B81E2A515C61009879D0 /* Data.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE78B8202A515C73009879D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE78B8212A515C85009879D0 /* Charts.swift */,
+				CE78B8102A515C37009879D0 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE78B8222A515C85009879D0 /* Charts.swift in Sources */,
 				CE78B8112A515C37009879D0 /* ContentView.swift in Sources */,
+				CE78B81F2A515C61009879D0 /* Data.swift in Sources */,
 				CE78B80F2A515C37009879D0 /* PancakeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
