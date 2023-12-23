@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		CE297A742B36D0B50024964C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE297A762B36D1E30024964C /* pancake-macOS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pancake-macOS.png"; sourceTree = "<group>"; };
+		CE297A772B36DE7E0024964C /* pancake-visionOS.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pancake-visionOS.PNG"; sourceTree = "<group>"; };
 		CE78B80B2A515C37009879D0 /* Pancake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pancake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE78B80E2A515C37009879D0 /* PancakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PancakeApp.swift; sourceTree = "<group>"; };
 		CE78B8102A515C37009879D0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				CE297A762B36D1E30024964C /* pancake-macOS.png */,
+				CE297A772B36DE7E0024964C /* pancake-visionOS.PNG */,
 			);
 			path = materials;
 			sourceTree = "<group>";

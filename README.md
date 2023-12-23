@@ -6,6 +6,10 @@ This is a demo app for a dashboard using SwiftUI and Swift Charts.
     <img src="materials/pancake-macOS.png" width=1024>
 </p>
 
+<p align="center">
+    <img src="materials/pancake-visionOS.PNG" width=1024>
+</p>
+
 ## Requirements
 
 - macOS 14.0+
